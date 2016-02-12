@@ -22,7 +22,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+#other gems
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'devise'
+gem 'paperclip', '~> 4.3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,6 +39,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rubocop', '~> 0.37.2', require: false
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
+  gem 'capybara'
+  gem 'better_errors'
+  gem 'factory_girl_rails'
 end
 
 group :development do
