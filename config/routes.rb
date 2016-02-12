@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy]
 
   devise_for :users
