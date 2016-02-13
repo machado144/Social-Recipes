@@ -1,6 +1,26 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/recipes_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/home_controller.rb": [
         1,
         1,
@@ -57,6 +77,6 @@
         null
       ]
     },
-    "timestamp": 1455301943
+    "timestamp": 1455376383
   }
 }

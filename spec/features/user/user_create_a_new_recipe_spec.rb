@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'simplecov'
-SimpleCov.start
 
 feature 'User Creates a New Recipe' do
   scenario 'successfully' do
