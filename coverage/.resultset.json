@@ -21,6 +21,10 @@
         1,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/kinds_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/kitchen_helper.rb": [
         1,
         null
@@ -53,7 +57,35 @@
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/home_controller.rb": [
         1,
         1,
-        17,
+        23,
+        null,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/kinds_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
         null,
         null
       ],
@@ -138,9 +170,16 @@
         null,
         null,
         null,
+        null,
         1,
         1,
         null,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/kind.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/kitchen.rb": [
@@ -201,6 +240,6 @@
         0
       ]
     },
-    "timestamp": 1455462344
+    "timestamp": 1455466320
   }
 }

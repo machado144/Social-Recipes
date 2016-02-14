@@ -1,4 +1,4 @@
-class Meal < ActiveRecord::Base
+class Kind < ActiveRecord::Base
   belongs_to :recipe
   validates :name, presence: true
 end

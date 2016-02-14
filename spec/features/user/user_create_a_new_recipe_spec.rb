@@ -8,6 +8,7 @@ feature 'User Creates a New Recipe' do
 
     Kitchen.create(name: 'Italiana')
     Meal.create(name: 'Sobremesa')
+    Kind.create(name: 'Carnes')
 
     click_on 'Cadastrar Receita'
 

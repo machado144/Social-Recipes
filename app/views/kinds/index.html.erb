@@ -1,0 +1,18 @@
+<% if current_user.try(:admin?) %>
+
+  <div class="row">
+    <div class="col-md-7 col-sm-7 col-md-offset-5 col-sm-offset-5">
+      <h1>Preferências</h1>
+    </div>
+  </div>
+  <% @kinds.each do |kind| %>
+  <div class="panel panel-body">
+    <div class="col-md-7 col-sm-7 col-md-offset-5 col-sm-offset-5">
+      <%= kind.name %>
+    </div>
+  </div>
+  <% end %>
+
+<% else %>
+<%= render 'recipes/permission' %>
+<% end %>

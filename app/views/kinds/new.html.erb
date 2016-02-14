@@ -1,0 +1,24 @@
+<% if current_user.try(:admin?) %>
+
+  <div class="container col-md-6 col-md-offset-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <div class="center-block">
+            <h1> Nova Preferência </h1>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="category_form">
+          <%= simple_form_for @kind do |f| %>
+            <%= f.input :name, label: 'Preferência', error: 'Campo obrigatório' %>
+          <%= f.submit 'Adicionar Preferência', class: 'btn btn-info' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% else %>
+  <%= render 'recipes/permission' %>
+  <% end %>

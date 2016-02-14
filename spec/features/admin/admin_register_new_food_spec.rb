@@ -21,7 +21,7 @@ feature 'Admin register a new food' do
     expect(page).to have_content 'Jantar'
   end
 
-  scenario 'successfully' do
+  scenario 'unsuccessfully' do
     create_admin
 
     admin_login
