@@ -1,5 +1,4 @@
 class KitchensController < ApplicationController
-
   def index
     @kitchens = Kitchen.all
   end
@@ -22,5 +21,4 @@ class KitchensController < ApplicationController
   def kitchen_params
     params.require(:kitchen).permit(:name)
   end
-
 end

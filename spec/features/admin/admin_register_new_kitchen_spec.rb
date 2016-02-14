@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'Admin register new kitchen' do
   scenario 'successfully' do
-
     create_admin
 
     admin_login
@@ -20,11 +19,9 @@ feature 'Admin register new kitchen' do
     click_on 'Listar Cozinhas'
 
     expect(page).to have_content 'Africana'
-
   end
 
   scenario 'unsuccessfully' do
-
     create_admin
 
     admin_login
@@ -38,6 +35,5 @@ feature 'Admin register new kitchen' do
     click_on 'Adicionar Cozinha'
 
     expect(page).to have_content 'Campo obrigatório'
-
   end
 end
