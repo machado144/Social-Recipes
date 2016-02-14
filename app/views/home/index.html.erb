@@ -2,7 +2,7 @@
   <div class="col-md-offset-2 col-sm-offset-1">
     <%= render "recipes/menu" %>
     <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1">
-      <h3>Últimas Receitas</h3>
+      <h3>Favoritas dos Usuários</h3>
         <% @recipes.each do |recipe| %>
         <div class="panel panel-body">
           <div class="col-md-4 col-sm-6">
@@ -20,18 +20,18 @@
     </div>
 
     <div class="col-md-3 col-sm-4">
-      <h3>Favoritas dos Usuários</h3>
-      <% @recipes.each do |recipe| %>
+      <h3>Últimas Receitas</h3>
+      <% @recents.each do |recent| %>
       <div class="panel panel-body">
         <div class="col-md-4 col-sm-6">
-          <%= image_tag recipe.upload.url(:thumb)%>
+          <%= image_tag recent.upload.url(:thumb)%>
         </div>
         <div class="col-md-7 col-sm-4">
-          <strong><%= recipe.recipe %></strong>
-          <p><strong>Refeição: </strong><%= recipe.meal %></p>
-          <p><strong>Tipo: </strong><%= recipe.kind %></p>
-          <p><strong>Cozinha: </strong><%= recipe.kitchen %></p>
-          <p><strong>Dificuldade: </strong><%= recipe.difficulty%></p>
+          <strong><%= recent.recipe %></strong>
+          <p><strong>Refeição: </strong><%= recent.meal %></p>
+          <p><strong>Tipo: </strong><%= recent.kind %></p>
+          <p><strong>Cozinha: </strong><%= recent.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= recent.difficulty%></p>
         </div>
       </div>
       <% end %>

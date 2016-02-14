@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-offset-2 col-sm-offset-1">
     <%= render "recipes/menu" %>
-    <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
+    <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1", id='recipe_1'>
       <h2><%= @recipe.recipe  %></h2>
       <li><strong>Cozinha: </strong><%= @recipe.kitchen  %></li>
       <li><strong>Tipo de Comida: </strong><%= @recipe.kind  %></li>
@@ -11,7 +11,7 @@
       <li><strong>Dificuldade: </strong><%= @recipe.difficulty  %></li><br>
       <h3>Ingredientes:</h3><%= @recipe.ingredients  %>
     </div>
-    <div class="col-md-4 col-sm-4">
+    <div class="col-md-4 col-sm-4", id='recipe_2'>
       <%= image_tag @recipe.upload.url(:medium)  %>
       <h3>Preparo:</h3><%= @recipe.steps  %>
     </div>

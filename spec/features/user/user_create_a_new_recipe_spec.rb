@@ -26,17 +26,22 @@ feature 'User Creates a New Recipe' do
 
     click_on 'Adicionar Receita'
 
-    expect(page).to have_content 'Bolinhos de bacalhau'
-    expect(page).to have_content 'Italiana'
-    expect(page).to have_content 'Sobremesa'
-    expect(page).to have_content 'Carnes'
-    expect(page).to have_content '6'
-    expect(page).to have_content '15~30 Minutos'
-    expect(page).to have_content 'Médio'
-    expect(page).to have_content 'bolinhos, bacalhau'
-    expect(page).to have_content 'Primeiro pega o bolinho, depois
-     coloca bacalhau dentro'
-    expect(page).to have_xpath "//*[@*='Bolobacalhau']"
+    within('#recipe_1') do
+      expect(page).to have_content 'Bolinhos de bacalhau'
+      expect(page).to have_content 'Italiana'
+      expect(page).to have_content 'Sobremesa'
+      expect(page).to have_content 'Carnes'
+      expect(page).to have_content '6'
+      expect(page).to have_content '15~30 Minutos'
+      expect(page).to have_content 'Médio'
+      expect(page).to have_content 'bolinhos, bacalhau'
+    end
+
+    within('#recipe_2') do
+      expect(page).to have_content 'Primeiro pega o bolinho, depois
+       coloca bacalhau dentro'
+      expect(page).to have_xpath "//*[@*='Bolobacalhau']"
+    end
   end
 
   scenario 'unsuccessfully and show each error message' do
