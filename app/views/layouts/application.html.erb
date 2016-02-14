@@ -7,22 +7,43 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <br>
     <div class="row">
-      <div class="col-md-2">
-        <h1>Social Recipe</h1>
+      <div class="col-md-6 col-md-offset-3">
+        <div class="container-fluid">
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <%=link_to 'Social Recipes', root_path, class: 'navbar-brand'%>
+              </div>
+              <ul class="nav navbar-nav">
+                <li>
+                  <% if user_signed_in? %>
+                  <%=link_to 'Cadastrar Receita', new_recipe_path %>
+                  <% else %>
+                  <%=link_to 'Cadastrar Receita', new_user_session_path %>
+                  <% end %>
+                </li>
+                <li>
+                  <% if user_signed_in? %>
+                  <%=link_to 'Sair', destroy_user_session_path, method: :delete %>
+                  <% else %>
+                  <%=link_to 'Entrar', new_user_session_path %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-      <div class="col-md-8">
-        <% if user_signed_in? %>
-        <p>Bem vindo
-          <%= current_user.email %></p>
-      <% else %>
-        <%=link_to 'Entrar', new_user_session_path %>
-        <% end %>
-        <%=link_to 'Cadastrar Receita', new_recipe_path %>
-      </div>
+
     </div>
 
-    <%= yield %>
+    <div class="row">
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+    </div>
 
   </body>
 </html>

@@ -1,1 +1,40 @@
-<h1></h1>
+<div class="row">
+  <div class="col-md-offset-2 col-sm-offset-1">
+    <%= render "recipes/menu" %>
+    <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1">
+      <h3>Últimas Receitas</h3>
+        <% @recipes.each do |recipe| %>
+        <div class="panel panel-body">
+          <div class="col-md-4 col-sm-4">
+            <%= image_tag recipe.upload.url(:thumb)%>
+          </div>
+          <div class="col-md-7 col-sm-4">
+            <strong><%= recipe.recipe %></strong>
+            <p>Refeição: <%= recipe.food %></p>
+            <p>Tipo: <%= recipe.kind %></p>
+            <p>Cozinha: <%= recipe.kitchen %></p>
+            <p>Dificuldade: <%= recipe.difficulty%></p>
+          </div>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+      <h3>Favoritas dos Usuários</h3>
+      <% @recipes.each do |recipe| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-4">
+          <%= image_tag recipe.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= recipe.recipe %></strong>
+          <p>Refeição: <%= recipe.food %></p>
+          <p>Tipo: <%= recipe.kind %></p>
+          <p>Cozinha: <%= recipe.kitchen %></p>
+          <p>Dificuldade: <%= recipe.difficulty%></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
