@@ -5,15 +5,15 @@
       <div class="panel-heading">
         <div class="panel-title">
           <div class="center-block">
-            <h1> Nova receita </h1>
+            <h1> Nova Refeição </h1>
           </div>
         </div>
       </div>
       <div class="panel-body">
         <div class="category_form">
-          <%= simple_form_for @kitchen do |f| %>
-            <%= f.input :name, label: 'Nome da cozinha', error: 'Campo obrigatório' %>
-          <%= f.submit 'Adicionar Cozinha', class: 'btn btn-info' %>
+          <%= simple_form_for @meal do |f| %>
+            <%= f.input :name, label: 'Refeição', error: 'Campo obrigatório' %>
+          <%= f.submit 'Adicionar Refeição', class: 'btn btn-info' %>
         <% end %>
       </div>
     </div>

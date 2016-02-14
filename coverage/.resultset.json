@@ -29,15 +29,17 @@
         1,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/meals_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/recipes_helper.rb": [
         1,
         null
       ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/admin_controller.rb": [
         1,
-        null,
         1,
-        null,
         null,
         null
       ],
@@ -51,13 +53,12 @@
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/home_controller.rb": [
         1,
         1,
-        11,
+        17,
         null,
         null
       ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/kitchens_controller.rb": [
         1,
-        null,
         1,
         1,
         null,
@@ -80,6 +81,31 @@
         1,
         2,
         null,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/meals_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -111,9 +137,9 @@
         null,
         null,
         null,
-        1,
-        1,
         null,
+        1,
+        1,
         null,
         null
       ],
@@ -123,7 +149,14 @@
         1,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/meal.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/recipe.rb": [
+        1,
         1,
         1,
         1,
@@ -168,6 +201,6 @@
         0
       ]
     },
-    "timestamp": 1455431059
+    "timestamp": 1455462344
   }
 }

@@ -7,12 +7,13 @@ feature 'User Creates a New Recipe' do
     login
 
     Kitchen.create(name: 'Italiana')
+    Meal.create(name: 'Sobremesa')
 
     click_on 'Cadastrar Receita'
 
     fill_in 'Nome da receita', with: 'Bolinhos de bacalhau'
     select 'Italiana', from: 'Cozinha'
-    select 'Sobremesa', from: 'Comida'
+    select 'Sobremesa', from: 'Refeição'
     select 'Carnes', from: 'Preferência'
     select '6', from: 'Quantidade'
     select '15~30 Minutos', from: 'Tempo de preparo'

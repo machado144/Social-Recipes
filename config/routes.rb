@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :kitchens, only: [:show, :new, :create, :edit, :update, :destroy, :index]
+  resources :meals, only: [:show, :new, :create, :edit, :update, :destroy, :index]
+
   resources :admin, only: [:index]
 
   devise_for :users
