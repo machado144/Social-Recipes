@@ -6,6 +6,8 @@ feature 'User Creates a New Recipe' do
 
     login
 
+    Kitchen.create(name: 'Italiana')
+
     click_on 'Cadastrar Receita'
 
     fill_in 'Nome da receita', with: 'Bolinhos de bacalhau'
@@ -39,6 +41,8 @@ feature 'User Creates a New Recipe' do
     create_user
 
     login
+
+    Kitchen.create(name: 'Italiana')
 
     click_on 'Cadastrar Receita'
 

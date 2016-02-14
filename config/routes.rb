@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy]
+  resources :kitchens, only: [:show, :new, :create, :edit, :update, :destroy, :index]
+  resources :admin, only: [:index]
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

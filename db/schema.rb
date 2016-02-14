@@ -11,40 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_212_011_202) do
-  create_table 'recipes', force: :cascade do |t|
-    t.string   'recipe'
-    t.string   'kitchen'
-    t.string   'food'
-    t.string   'kind'
-    t.integer  'quantity'
-    t.string   'difficulty'
-    t.text     'ingredients'
-    t.text     'steps'
-    t.datetime 'created_at',          null: false
-    t.datetime 'updated_at',          null: false
-    t.string   'upload_file_name'
-    t.string   'upload_content_type'
-    t.integer  'upload_file_size'
-    t.datetime 'upload_updated_at'
-    t.string   'time'
+ActiveRecord::Schema.define(version: 20160214033940) do
+
+  create_table "kitchens", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string   'email',                  default: '', null: false
-    t.string   'encrypted_password',     default: '', null: false
-    t.string   'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.integer  'sign_in_count', default: 0, null: false
-    t.datetime 'current_sign_in_at'
-    t.datetime 'last_sign_in_at'
-    t.string   'current_sign_in_ip'
-    t.string   'last_sign_in_ip'
-    t.datetime 'created_at',                          null: false
-    t.datetime 'updated_at',                          null: false
+  create_table "recipes", force: :cascade do |t|
+    t.string   "recipe"
+    t.string   "kitchen"
+    t.string   "food"
+    t.string   "kind"
+    t.integer  "quantity"
+    t.string   "difficulty"
+    t.text     "ingredients"
+    t.text     "steps"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
+    t.string   "time"
+    t.integer  "kitchen_id"
   end
 
-  add_index 'users', ['email'], name: 'index_users_on_email', unique: true
-  add_index 'users', ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+  add_index "recipes", ["kitchen_id"], name: "index_recipes_on_kitchen_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "admin",                  default: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
 end

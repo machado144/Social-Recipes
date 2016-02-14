@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'paperclip', '~> 4.3'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'byebug'

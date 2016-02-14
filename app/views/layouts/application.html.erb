@@ -31,6 +31,11 @@
                   <%=link_to 'Entrar', new_user_session_path %>
                   <% end %>
                 </li>
+                <li>
+                  <% if current_user.try(:admin?) %>
+                  <%=link_to 'Painel do Administrador', admin_index_path %>
+                  <% end %>
+                </li>
               </ul>
             </div>
           </nav>

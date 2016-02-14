@@ -11,7 +11,7 @@
       <div class="category_form">
         <%= simple_form_for @recipe do |f| %>
           <%= f.input :recipe, label: 'Nome da receita', error: 'Campo obrigatório' %>
-          <%= f.input :kitchen, label: 'Cozinha', collection: [:Italiana, :Espanhola], error: 'Campo obrigatório' %>
+          <%= f.input :kitchen, label: 'Cozinha', collection: Kitchen.all, error: 'Campo obrigatório' %>
           <%= f.input :food, label: 'Comida', collection: [:'Café da manhã', :Sobremesa], error: 'Campo obrigatório' %>
           <%= f.input :kind, label: 'Preferência', collection: [:Carnes, :Doces], error: 'Campo obrigatório'  %>
           <%= f.input :quantity, label: 'Quantidade', collection: 1..12 %>

@@ -9,6 +9,10 @@
         null,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/admin_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/application_helper.rb": [
         1,
         null
@@ -17,14 +21,23 @@
         1,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/kitchen_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/kitchens_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/helpers/recipes_helper.rb": [
         1,
         null
       ],
-      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/home_controller.rb": [
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/admin_controller.rb": [
         1,
+        null,
         1,
-        5,
+        null,
         null,
         null
       ],
@@ -33,6 +46,41 @@
         null,
         null,
         1,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/home_controller.rb": [
+        1,
+        1,
+        11,
+        null,
+        null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/kitchens_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/controllers/recipes_controller.rb": [
@@ -69,7 +117,14 @@
         null,
         null
       ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/kitchen.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/recipe.rb": [
+        1,
         1,
         1,
         1,
@@ -77,8 +132,42 @@
         1,
         null,
         null
+      ],
+      "/Users/lucasmachado/Documents/rails/MySocialRecipe/app/models/ability.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1455415943
+    "timestamp": 1455428580
   }
 }
