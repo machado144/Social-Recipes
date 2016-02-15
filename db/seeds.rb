@@ -8,15 +8,42 @@ Meal.create(name: 'Café da Manhã')
 Kind.create(name: 'Sem Glutén')
 Kind.create(name: 'Sem Lactose')
 Kind.create(name: 'Sem Sabor')
+
 Recipe.create(recipe: 'Bolinho', kitchen: 'Espanhola', meal: 'Jantar',
  kind: 'Sem Glutén', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
  ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
  upload_file_name: 'BoloBacalhau.png')
-Recipe.create(recipe: 'Bolão', kitchen: 'Japonesa', meal: 'Sobremesa',
+Recipe.create(recipe: 'Bolovo', kitchen: 'Espanhola', meal: 'Jantar',
+ kind: 'Sem Glutén', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'BoloBacalhau.png')
+Recipe.create(recipe: 'Boluva', kitchen: 'Espanhola', meal: 'Jantar',
+ kind: 'Sem Glutén', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'BoloBacalhau.png')
+
+Recipe.create(recipe: 'Bolitos', kitchen: 'Japonesa', meal: 'Sobremesa',
  kind: 'Sem Lactose', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
-  ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
-  upload_file_name: 'Biscoito.png')
-Recipe.create(recipe: 'Bolota', kitchen: 'Brasileira', meal: 'Café da Manhã',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'Biscoito.png')
+Recipe.create(recipe: 'Bolotitos', kitchen: 'Japonesa', meal: 'Sobremesa',
+ kind: 'Sem Lactose', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'Biscoito.png')
+Recipe.create(recipe: 'Bolutitos', kitchen: 'Japonesa', meal: 'Sobremesa',
+ kind: 'Sem Lactose', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'Biscoito.png')
+
+Recipe.create(recipe: 'BoloBahiano', kitchen: 'Brasileira', meal: 'Café da Manhã',
+ kind: 'Sem Sabor', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'Bolo.png')
+Recipe.create(recipe: 'Bolo de Acarajé', kitchen: 'Brasileira', meal: 'Café da Manhã',
+ kind: 'Sem Sabor', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
+ ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
+ upload_file_name: 'Bolo.png')
+Recipe.create(recipe: 'Bolito de Acarajé', kitchen: 'Brasileira', meal: 'Café da Manhã',
  kind: 'Sem Sabor', quantity: 3, time: '5~15 Minutos', difficulty: 'Médio',
  ingredients: 'Teste A, Teste B', steps: 'Teste A + Teste B',
  upload_file_name: 'Bolo.png')

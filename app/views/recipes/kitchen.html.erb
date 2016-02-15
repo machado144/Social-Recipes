@@ -1,0 +1,56 @@
+<div class="row">
+
+
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @espanhola.each do |es| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag es.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= es.recipe %></strong>
+          <p><strong>Refeição: </strong><%= es.meal %></p>
+          <p><strong>Tipo: </strong><%= es.kind %></p>
+          <p><strong>Cozinha: </strong><%= es.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= es.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @japonesa.each do |jp| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag jp.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= jp.recipe %></strong>
+          <p><strong>Refeição: </strong><%= jp.meal %></p>
+          <p><strong>Tipo: </strong><%= jp.kind %></p>
+          <p><strong>Cozinha: </strong><%= jp.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= jp.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @brasileira.each do |br| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-8">
+          <%= image_tag br.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= br.recipe %></strong>
+          <p><strong>Refeição: </strong><%= br.meal %></p>
+          <p><strong>Tipo: </strong><%= br.kind %></p>
+          <p><strong>Cozinha: </strong><%= br.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= br.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,56 @@
+<div class="row">
+
+
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @gluten.each do |g| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag g.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= g.recipe %></strong>
+          <p><strong>Refeição: </strong><%= g.meal %></p>
+          <p><strong>Tipo: </strong><%= g.kind %></p>
+          <p><strong>Cozinha: </strong><%= g.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= g.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @lactose.each do |l| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag l.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= l.recipe %></strong>
+          <p><strong>Refeição: </strong><%= l.meal %></p>
+          <p><strong>Tipo: </strong><%= l.kind %></p>
+          <p><strong>Cozinha: </strong><%= l.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= l.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @sabor.each do |s| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-8">
+          <%= image_tag s.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= s.recipe %></strong>
+          <p><strong>Refeição: </strong><%= s.meal %></p>
+          <p><strong>Tipo: </strong><%= s.kind %></p>
+          <p><strong>Cozinha: </strong><%= s.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= s.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+</div>

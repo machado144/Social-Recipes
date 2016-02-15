@@ -18,6 +18,12 @@ module ModelsMacros
     click_on 'Log in'
   end
 
+  def create_recipe(recipe, kitchen, meal, kind, quantity, time, difficulty, ingredients, steps)
+    Recipe.create(recipe: recipe, kitchen: kitchen, meal: meal,
+     kind: kind, quantity: quantity, time: time, difficulty: difficulty,
+     ingredients: ingredients, steps: steps)
+  end
+
   def login
     visit root_path
 

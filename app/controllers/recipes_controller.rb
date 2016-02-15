@@ -1,8 +1,26 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show]
-  before_action :set_collections, only: [:new, :create]
+  before_action :set_collections
 
   def show
+  end
+
+  def kind
+    @gluten = Recipe.where(kind: 'Sem Glutén')
+    @lactose = Recipe.where(kind: 'Sem Lactose')
+    @sabor = Recipe.where(kind: 'Sem Sabor')
+  end
+
+  def meal
+    @jantar = Recipe.where(meal: 'Jantar')
+    @sobremesa = Recipe.where(meal: 'Sobremesa')
+    @cafe = Recipe.where(meal: 'Café da Manhã')
+  end
+
+  def kitchen
+    @espanhola = Recipe.where(kitchen: 'Espanhola')
+    @japonesa = Recipe.where(kitchen: 'Japonesa')
+    @brasileira = Recipe.where(kitchen: 'Brasileira')
   end
 
   def new

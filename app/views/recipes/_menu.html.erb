@@ -1,20 +1,20 @@
-<div class="col-md-1 col-sm-3">
+<div class="col-md-2 col-sm-3", id="Filters">
   <h3>Prefência</h3>
   <ul>
-    <li>Vegetariana</li>
-    <li>Carnes</li>
-    <li>Diet</li>
+    <% @kinds.each do |kind|  %>
+    <li><%=link_to kind.name, kind_recipe_path(kind.name) %></li>
+    <% end %>
   </ul>
   <h3>Tipo</h3>
   <ul>
-    <li>Entrada</li>
-    <li>Principal</li>
-    <li>Sobremesa</li>
+    <% @meals.each do |meal| %>
+    <li><%=link_to meal.name, meal_recipe_path(meal.name) %></li>
+    <% end %>
   </ul>
   <h3>Cozinha</h3>
   <ul>
-    <li>Mineira</li>
-    <li>Italiana</li>
-    <li>Mexicana</li>
+    <% @kitchens.each do |kitchen| %>
+    <li><%=link_to kitchen.name, kitchen_recipe_path(kitchen.name) %></li>
+    <% end %>
   </ul>
 </div>

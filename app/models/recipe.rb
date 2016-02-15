@@ -8,7 +8,5 @@ class Recipe < ActiveRecord::Base
 
   validates :recipe, :kitchen, :meal, :kind,
             :ingredients, :steps, presence: true
-
-
-
+  
 end

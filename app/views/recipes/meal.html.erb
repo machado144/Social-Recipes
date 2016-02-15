@@ -1,0 +1,56 @@
+<div class="row">
+
+
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @jantar.each do |j| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag j.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= j.recipe %></strong>
+          <p><strong>Refeição: </strong><%= j.meal %></p>
+          <p><strong>Tipo: </strong><%= j.kind %></p>
+          <p><strong>Cozinha: </strong><%= j.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= j.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @sobremesa.each do |s| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-6">
+          <%= image_tag s.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= s.recipe %></strong>
+          <p><strong>Refeição: </strong><%= s.meal %></p>
+          <p><strong>Tipo: </strong><%= s.kind %></p>
+          <p><strong>Cozinha: </strong><%= s.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= s.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+    <% @cafe.each do |c| %>
+      <div class="panel panel-body">
+        <div class="col-md-4 col-sm-8">
+          <%= image_tag c.upload.url(:thumb)%>
+        </div>
+        <div class="col-md-7 col-sm-4">
+          <strong><%= c.recipe %></strong>
+          <p><strong>Refeição: </strong><%= c.meal %></p>
+          <p><strong>Tipo: </strong><%= c.kind %></p>
+          <p><strong>Cozinha: </strong><%= c.kitchen %></p>
+          <p><strong>Dificuldade: </strong><%= c.difficulty %></p>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+</div>
