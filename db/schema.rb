@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214155805) do
+ActiveRecord::Schema.define(version: 20160216054556) do
 
   create_table "kinds", force: :cascade do |t|
     t.string   "name"
@@ -33,8 +33,6 @@ ActiveRecord::Schema.define(version: 20160214155805) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "recipe"
-    t.string   "kitchen"
-    t.string   "kind"
     t.integer  "quantity"
     t.string   "difficulty"
     t.text     "ingredients"
@@ -46,10 +44,9 @@ ActiveRecord::Schema.define(version: 20160214155805) do
     t.integer  "upload_file_size"
     t.datetime "upload_updated_at"
     t.string   "time"
-    t.integer  "kitchen_id"
-    t.string   "meal"
     t.integer  "meal_id"
     t.integer  "kind_id"
+    t.integer  "kitchen_id"
   end
 
   add_index "recipes", ["kind_id"], name: "index_recipes_on_kind_id"

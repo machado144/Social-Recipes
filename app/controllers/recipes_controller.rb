@@ -5,24 +5,6 @@ class RecipesController < ApplicationController
   def show
   end
 
-  def kind
-    @gluten = Recipe.where(kind: 'Sem Glutén')
-    @lactose = Recipe.where(kind: 'Sem Lactose')
-    @sabor = Recipe.where(kind: 'Sem Sabor')
-  end
-
-  def meal
-    @jantar = Recipe.where(meal: 'Jantar')
-    @sobremesa = Recipe.where(meal: 'Sobremesa')
-    @cafe = Recipe.where(meal: 'Café da Manhã')
-  end
-
-  def kitchen
-    @espanhola = Recipe.where(kitchen: 'Espanhola')
-    @japonesa = Recipe.where(kitchen: 'Japonesa')
-    @brasileira = Recipe.where(kitchen: 'Brasileira')
-  end
-
   def new
     @recipe = Recipe.new
   end
@@ -45,9 +27,9 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:recipe, :kitchen, :food, :kind, :quantity,
+    params.require(:recipe).permit(:recipe, :kitchen_id, :kind_id, :quantity,
                                    :time, :difficulty, :ingredients, :steps,
-                                   :meal, :upload)
+                                   :meal_id, :upload)
   end
 
   def set_recipe

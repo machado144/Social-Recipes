@@ -9,10 +9,10 @@
             <%= image_tag recipe.upload.url(:thumb)%>
           </div>
           <div class="col-md-7 col-sm-4">
-            <strong><%= recipe.recipe %></strong>
-            <p><strong>Refeição: </strong><%= recipe.meal %></p>
-            <p><strong>Tipo: </strong><%= recipe.kind %></p>
-            <p><strong>Cozinha: </strong><%= recipe.kitchen %></p>
+            <strong><%=link_to recipe.recipe, recipe %></strong>
+            <p><strong>Refeição: </strong><%= recipe.meal.name %></p>
+            <p><strong>Tipo: </strong><%= recipe.kind.name %></p>
+            <p><strong>Cozinha: </strong><%= recipe.kitchen.name %></p>
             <p><strong>Dificuldade: </strong><%= recipe.difficulty%></p>
           </div>
         </div>
@@ -27,10 +27,10 @@
           <%= image_tag recent.upload.url(:thumb)%>
         </div>
         <div class="col-md-7 col-sm-4">
-          <strong><%= recent.recipe %></strong>
-          <p><strong>Refeição: </strong><%= recent.meal %></p>
-          <p><strong>Tipo: </strong><%= recent.kind %></p>
-          <p><strong>Cozinha: </strong><%= recent.kitchen %></p>
+          <strong><%=link_to recent.recipe, recent %></strong>
+          <p><strong>Refeição: </strong><%= recent.meal.name %></p>
+          <p><strong>Tipo: </strong><%= recent.kind.name %></p>
+          <p><strong>Cozinha: </strong><%= recent.kitchen.name %></p>
           <p><strong>Dificuldade: </strong><%= recent.difficulty%></p>
         </div>
       </div>

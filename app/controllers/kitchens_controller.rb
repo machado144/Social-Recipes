@@ -1,4 +1,6 @@
 class KitchensController < ApplicationController
+  before_action :set_kitchen, only: [:edit, :update, :show]
+
   def index
     @kitchens = Kitchen.all
   end
@@ -16,9 +18,16 @@ class KitchensController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def kitchen_params
     params.require(:kitchen).permit(:name)
+  end
+
+  def set_kitchen
+    @kitchen = Kitchen.find(params[:id])
   end
 end

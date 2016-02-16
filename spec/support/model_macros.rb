@@ -19,8 +19,8 @@ module ModelsMacros
   end
 
   def create_recipe(recipe, kitchen, meal, kind, quantity, time, difficulty, ingredients, steps)
-    Recipe.create(recipe: recipe, kitchen: kitchen, meal: meal,
-     kind: kind, quantity: quantity, time: time, difficulty: difficulty,
+    Recipe.create(recipe: recipe, kitchen_id: kitchen, meal_id: meal,
+     kind_id: kind, quantity: quantity, time: time, difficulty: difficulty,
      ingredients: ingredients, steps: steps)
   end
 

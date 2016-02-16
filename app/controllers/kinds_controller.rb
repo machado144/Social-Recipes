@@ -1,4 +1,6 @@
 class KindsController < ApplicationController
+  before_action :set_kind, only: [:edit, :update, :show]
+
   def new
     @kind = Kind.new
   end
@@ -20,5 +22,9 @@ class KindsController < ApplicationController
 
   def kind_params
     params.require(:kind).permit(:name)
+  end
+
+  def set_kind
+    @kind = Kind.find(params[:id])
   end
 end

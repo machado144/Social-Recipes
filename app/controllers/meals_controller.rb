@@ -1,4 +1,6 @@
 class MealsController < ApplicationController
+  before_action :set_meal, only: [:edit, :update, :show]
+
   def new
     @meal = Meal.new
   end
@@ -20,5 +22,9 @@ class MealsController < ApplicationController
 
   def meal_params
     params.require(:meal).permit(:name)
+  end
+
+  def set_meal
+    @meal = Meal.find(params[:id])
   end
 end

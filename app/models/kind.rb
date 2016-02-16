@@ -1,4 +1,4 @@
 class Kind < ActiveRecord::Base
-  belongs_to :recipe
+  has_many :recipes
   validates :name, presence: true
 end

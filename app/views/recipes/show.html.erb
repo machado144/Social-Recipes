@@ -3,9 +3,9 @@
     <%= render "recipes/menu" %>
     <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1", id='recipe_1'>
       <h2><%= @recipe.recipe  %></h2>
-      <li><strong>Cozinha: </strong><%= @recipe.kitchen  %></li>
-      <li><strong>Tipo de Comida: </strong><%= @recipe.kind  %></li>
-      <li><strong>Refeição: </strong><%= @recipe.meal  %></li>
+      <li><strong>Cozinha: </strong><%= @recipe.kitchen.name  %></li>
+      <li><strong>Tipo de Comida: </strong><%= @recipe.kind.name  %></li>
+      <li><strong>Refeição: </strong><%= @recipe.meal.name  %></li>
       <li><strong>Porção para: </strong> <%= @recipe.quantity  %> pessoa(s)</li>
       <li><strong>Tempo de preparo: </strong><%= @recipe.time  %></li>
       <li><strong>Dificuldade: </strong><%= @recipe.difficulty  %></li><br>

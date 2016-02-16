@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy] do
-    member do
-      get 'kitchen'
-      get 'meal'
-      get 'kind'
-    end
-  end
+  resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :kitchens, only: [:show, :new, :create, :edit, :update, :destroy, :index]
   resources :meals, only: [:show, :new, :create, :edit, :update, :destroy, :index]
   resources :kinds, only: [:show, :new, :create, :edit, :update, :destroy, :index]

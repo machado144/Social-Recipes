@@ -2,19 +2,19 @@
   <h3>Prefência</h3>
   <ul>
     <% @kinds.each do |kind|  %>
-    <li><%=link_to kind.name, kind_recipe_path(kind.name) %></li>
+    <li><%=link_to kind.name, kind %></li>
     <% end %>
   </ul>
   <h3>Tipo</h3>
   <ul>
     <% @meals.each do |meal| %>
-    <li><%=link_to meal.name, meal_recipe_path(meal.name) %></li>
+    <li><%=link_to meal.name, meal %></li>
     <% end %>
   </ul>
   <h3>Cozinha</h3>
   <ul>
     <% @kitchens.each do |kitchen| %>
-    <li><%=link_to kitchen.name, kitchen_recipe_path(kitchen.name) %></li>
+    <li><%=link_to kitchen.name, kitchen %></li>
     <% end %>
   </ul>
 </div>
