@@ -1,15 +1,16 @@
-<h1>Recipes</h1>
-<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1", id='recipe_1'>
-  <h2><%= recipe.recipe  %></h2>
-  <li><strong>Cozinha: </strong><%= recipe.kitchen.name  %></li>
-  <li><strong>Tipo de Comida: </strong><%= recipe.kind.name  %></li>
-  <li><strong>Refeição: </strong><%= recipe.meal.name  %></li>
-  <li><strong>Porção para: </strong> <%= recipe.quantity  %> pessoa(s)</li>
-  <li><strong>Tempo de preparo: </strong><%= recipe.time  %></li>
-  <li><strong>Dificuldade: </strong><%= recipe.difficulty  %></li><br>
-  <h3>Ingredientes:</h3><%= recipe.ingredients  %>
-</div>
-<div class="col-md-4 col-sm-4", id='recipe_2'>
-  <%= image_tag recipe.upload.url(:medium)  %>
-  <h3>Preparo:</h3><%= recipe.steps  %>
+<div class="panel panel-body">
+  <div class="col-md-3 col-md-offset-3", id='recipe'>
+    <h2><%= recipe.recipe  %></h2>
+    <li><strong>Cozinha: </strong><%= recipe.kitchen.name  %></li>
+    <li><strong>Tipo de Comida: </strong><%= recipe.kind.name  %></li>
+    <li><strong>Refeição: </strong><%= recipe.meal.name  %></li>
+    <li><strong>Porção para: </strong> <%= recipe.quantity  %> pessoa(s)</li>
+    <li><strong>Tempo de preparo: </strong><%= recipe.time  %></li>
+    <li><strong>Dificuldade: </strong><%= recipe.difficulty  %></li><br>
+    <h3>Ingredientes:</h3><%= recipe.ingredients  %>
+  </div>
+  <div class="col-md-4 col-sm-4", id='img_steps'>
+    <%= image_tag recipe.upload.url(:medium)  %>
+    <h3>Preparo:</h3><%= recipe.steps  %>
+  </div>
 </div>

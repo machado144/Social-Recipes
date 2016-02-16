@@ -1,40 +1,45 @@
 <div class="row">
-  <div class="col-md-offset-1 col-sm-offset-1">
-    <%= render "recipes/menu" %>
-    <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1">
-      <h3>Favoritas dos Usuários</h3>
-        <% @recipes.each do |recipe| %>
+  <div class="col-md-12">
+    <div class="col-md-3">
+      <%= render "recipes/menu" %>
+    </div>
+    <div class="col-md-9">
+      <div class="col-md-6 col-sm-4", id="favorite_recipes">
+        <h3>Favoritas dos Usuários</h3>
+          <% @recipes.each do |recipe| %>
+          <div class="panel panel-body">
+            <div class="col-md-5 col-sm-6">
+              <%= image_tag recipe.upload.url, class: 'img-responsive' %>
+            </div>
+            <div class="col-md-7 col-sm-4">
+              <strong><%=link_to recipe.recipe, recipe %></strong>
+              <p><strong>Refeição: </strong><%= recipe.meal.name %></p>
+              <p><strong>Tipo: </strong><%= recipe.kind.name %></p>
+              <p><strong>Cozinha: </strong><%= recipe.kitchen.name %></p>
+              <p><strong>Dificuldade: </strong><%= recipe.difficulty%></p>
+            </div>
+          </div>
+          <% end %>
+      </div>
+
+      <div class="col-md-6 col-sm-4", id="last_recipes">
+        <h3>Últimas Receitas</h3>
+        <% @recents.each do |recent| %>
         <div class="panel panel-body">
-          <div class="col-md-4 col-sm-6">
-            <%= image_tag recipe.upload.url(:thumb)%>
+          <div class="col-md-5 col-sm-6">
+            <%= image_tag recent.upload.url, class: 'img-responsive' %>
           </div>
           <div class="col-md-7 col-sm-4">
-            <strong><%=link_to recipe.recipe, recipe %></strong>
-            <p><strong>Refeição: </strong><%= recipe.meal.name %></p>
-            <p><strong>Tipo: </strong><%= recipe.kind.name %></p>
-            <p><strong>Cozinha: </strong><%= recipe.kitchen.name %></p>
-            <p><strong>Dificuldade: </strong><%= recipe.difficulty%></p>
+            <strong><%=link_to recent.recipe, recent %></strong>
+            <p><strong>Refeição: </strong><%= recent.meal.name %></p>
+            <p><strong>Tipo: </strong><%= recent.kind.name %></p>
+            <p><strong>Cozinha: </strong><%= recent.kitchen.name %></p>
+            <p><strong>Dificuldade: </strong><%= recent.difficulty%></p>
           </div>
         </div>
         <% end %>
+      </div>
     </div>
 
-    <div class="col-md-3 col-sm-4">
-      <h3>Últimas Receitas</h3>
-      <% @recents.each do |recent| %>
-      <div class="panel panel-body">
-        <div class="col-md-4 col-sm-6">
-          <%= image_tag recent.upload.url(:thumb)%>
-        </div>
-        <div class="col-md-7 col-sm-4">
-          <strong><%=link_to recent.recipe, recent %></strong>
-          <p><strong>Refeição: </strong><%= recent.meal.name %></p>
-          <p><strong>Tipo: </strong><%= recent.kind.name %></p>
-          <p><strong>Cozinha: </strong><%= recent.kitchen.name %></p>
-          <p><strong>Dificuldade: </strong><%= recent.difficulty%></p>
-        </div>
-      </div>
-      <% end %>
-    </div>
   </div>
 </div>

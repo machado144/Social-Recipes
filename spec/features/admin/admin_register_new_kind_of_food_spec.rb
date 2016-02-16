@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Admin register new kind of food' do
   scenario 'succesfully' do
-    create_admin
+    create(:admin)
 
     admin_login
 
@@ -22,7 +22,7 @@ feature 'Admin register new kind of food' do
   end
 
   scenario 'unsuccessfully' do
-    create_admin
+    create(:admin)
 
     admin_login
 

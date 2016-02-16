@@ -1,3 +1,12 @@
-<h2><%= @kind.name %></h2>
-
-<%= render @kind.recipes %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-offset-5">
+      <h2><%= @kind.name %></h2><br><br>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= render @kind.recipes %>
+      </div>
+    </div>
+  </div>
+</div>

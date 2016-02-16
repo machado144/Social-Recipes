@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User Creates a New Recipe' do
   scenario 'successfully' do
-    create_user
+    create(:user)
 
     login
 
@@ -20,8 +20,7 @@ feature 'User Creates a New Recipe' do
     select '15~30 Minutos', from: 'Tempo de preparo'
     select 'Médio', from: 'Dificuldade'
     fill_in 'Ingredientes', with: 'bolinhos, bacalhau'
-    fill_in 'Passo a passo', with: 'Primeiro pega o bolinho, depois
-     coloca bacalhau dentro'
+    fill_in 'Passo a passo', with: 'Primeiro pega o bolinho, depois coloca bacalhau dentro'
     attach_file('Arquivo', 'spec/files/BoloBacalhau.png')
 
     click_on 'Adicionar Receita'
@@ -38,18 +37,15 @@ feature 'User Creates a New Recipe' do
     end
 
     within('#recipe_2') do
-      expect(page).to have_content 'Primeiro pega o bolinho, depois
-       coloca bacalhau dentro'
+      expect(page).to have_content 'Primeiro pega o bolinho, depois coloca bacalhau dentro'
       expect(page).to have_xpath "//*[@*='Bolobacalhau']"
     end
   end
 
   scenario 'unsuccessfully and show each error message' do
-    create_user
+    create(:user)
 
     login
-
-    Kitchen.create(name: 'Italiana')
 
     click_on 'Cadastrar Receita'
 
