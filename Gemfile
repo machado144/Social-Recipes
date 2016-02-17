@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'paperclip', '~> 4.3'
 gem 'cancancan', '~> 1.10'
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
