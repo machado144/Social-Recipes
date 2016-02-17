@@ -16,6 +16,7 @@ gem 'paperclip', '~> 4.3'
 gem 'cancancan', '~> 1.10'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'byebug'
@@ -25,7 +26,6 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'better_errors'
-  gem 'factory_girl_rails'
 end
 
 group :development do
