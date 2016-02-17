@@ -1,6 +1,4 @@
 module ModelsMacros
-
-
   def admin_login
     visit root_path
 

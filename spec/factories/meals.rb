@@ -6,6 +6,6 @@ end
 
 FactoryGirl.define do
   factory :meal do
-    name "Sobremesa"
+    name 'Sobremesa'
   end
 end

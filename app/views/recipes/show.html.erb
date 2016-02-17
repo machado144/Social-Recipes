@@ -14,7 +14,7 @@
       <h3>Ingredientes:</h3><%= @recipe.ingredients  %>
     </div>
     <div class="col-md-3 col-sm-4", id='recipe_2'>
-      <%= image_tag @recipe.upload.url(:medium)  %>
+      <%= image_tag @recipe.upload.url, class: 'img-responsive'  %>
       <h3>Preparo:</h3><%= @recipe.steps  %>
     </div>
   </div>

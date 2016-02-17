@@ -14,3 +14,4 @@ AllCops:
     - 'script/**/*'
     - 'Rakefile'
     - 'app/models/recipe.rb'
+    - 'spec/features/user/user_create_a_new_recipe_spec.rb'

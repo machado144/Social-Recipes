@@ -11,5 +11,4 @@ class HomeController < ApplicationController
     @kinds = Kind.all
     @kitchens = Kitchen.all
   end
-
 end

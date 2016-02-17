@@ -6,6 +6,6 @@ end
 
 FactoryGirl.define do
   factory :kind do
-    name "Carnes"
+    name 'Carnes'
   end
 end

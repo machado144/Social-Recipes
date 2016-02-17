@@ -6,6 +6,6 @@ end
 
 FactoryGirl.define do
   factory :kitchen do
-    name "Japonesa"
+    name 'Japonesa'
   end
 end
