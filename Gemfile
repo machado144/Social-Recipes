@@ -17,7 +17,7 @@ gem 'cancancan', '~> 1.10'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 gem 'factory_girl_rails'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
